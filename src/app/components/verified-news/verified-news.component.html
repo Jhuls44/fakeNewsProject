@@ -1,1 +1,158 @@
-<p>verified-news works!</p>
+<section class="verified-section">
+  <div class="section-header">
+    <h2 class="section-title">Noticias Verificadas</h2>
+    <div class="verification-filter">
+      <button class="filter-btn active">Todas</button>
+      <button class="filter-btn">Verificadas</button>
+      <button class="filter-btn">Falsas</button>
+      <button class="filter-btn">Parciales</button>
+    </div>
+  </div>
+  
+  <div class="verified-grid">
+    <!-- Noticia 1 -->
+    <article class="verified-card">
+      <div class="card-top">
+        <div class="verification-tag verified">
+          <i class="fas fa-check-circle"></i> Verificada
+        </div>
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?w=800" alt="Imagen de Marte">
+          <div class="image-caption">Imagen de Marte de la NASA</div>
+        </div>
+      </div>
+      <div class="card-content">
+        <h3 class="card-title">Descubrimiento de agua en Marte confirmado por científicos</h3>
+        <p class="card-excerpt">Nuestros verificadores confirman que esta noticia es cierta basada en datos oficiales de la NASA publicados recientemente.</p>
+        <div class="verification-details">
+          <div class="verification-meta">
+            <div class="meta-item">
+              <i class="fas fa-calendar-alt"></i>
+              <span>Verificada: 10/05/2023</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-newspaper"></i>
+              <span>Fuente: Agencia Espacial Europea</span>
+            </div>
+          </div>
+          <div class="confidence-meter">
+            <div class="confidence-label">Confianza:</div>
+            <div class="confidence-bar">
+              <div class="confidence-level" style="width: 98%"></div>
+              <div class="confidence-value">98%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-actions">
+        <button class="action-btn">
+          <i class="fas fa-share-alt"></i> Compartir
+        </button>
+        <button class="action-btn">
+          <i class="fas fa-bookmark"></i> Guardar
+        </button>
+        <button class="action-btn">
+          <i class="fas fa-file-alt"></i> Reporte completo
+        </button>
+      </div>
+    </article>
+
+    <!-- Noticia 2 -->
+    <article class="verified-card">
+      <div class="card-top">
+        <div class="verification-tag false">
+          <i class="fas fa-times-circle"></i> Falsa
+        </div>
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800" alt="Imagen de redes sociales">
+          <div class="image-caption">Imagen utilizada en la noticia falsa</div>
+        </div>
+      </div>
+      <div class="card-content">
+        <h3 class="card-title">Gobierno anuncia impuesto especial para usuarios de redes sociales</h3>
+        <p class="card-excerpt">Nuestro equipo ha verificado que esta noticia es completamente falsa. No existe tal propuesta en el gobierno actual.</p>
+        <div class="verification-details">
+          <div class="verification-meta">
+            <div class="meta-item">
+              <i class="fas fa-calendar-alt"></i>
+              <span>Verificada: 15/05/2023</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-newspaper"></i>
+              <span>Fuente: Redes Sociales</span>
+            </div>
+          </div>
+          <div class="confidence-meter">
+            <div class="confidence-label">Confianza:</div>
+            <div class="confidence-bar">
+              <div class="confidence-level" style="width: 92%"></div>
+              <div class="confidence-value">92%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-actions">
+        <button class="action-btn">
+          <i class="fas fa-share-alt"></i> Compartir
+        </button>
+        <button class="action-btn">
+          <i class="fas fa-bookmark"></i> Guardar
+        </button>
+        <button class="action-btn">
+          <i class="fas fa-file-alt"></i> Reporte completo
+        </button>
+      </div>
+    </article>
+
+    <!-- Noticia 3 -->
+    <article class="verified-card">
+      <div class="card-top">
+        <div class="verification-tag partial">
+          <i class="fas fa-exclamation-circle"></i> Parcialmente cierta
+        </div>
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800" alt="Pequeña empresa">
+          <div class="image-caption">Pequeña empresa local</div>
+        </div>
+      </div>
+      <div class="card-content">
+        <h3 class="card-title">Nueva ley reduce impuestos a pequeñas empresas en un 30%</h3>
+        <p class="card-excerpt">Hemos verificado que esta información es parcialmente cierta, pero contiene detalles inexactos sobre los porcentajes aplicados.</p>
+        <div class="verification-details">
+          <div class="verification-meta">
+            <div class="meta-item">
+              <i class="fas fa-calendar-alt"></i>
+              <span>Verificada: 08/05/2023</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-newspaper"></i>
+              <span>Fuente: Periódico Económico</span>
+            </div>
+          </div>
+          <div class="confidence-meter">
+            <div class="confidence-label">Confianza:</div>
+            <div class="confidence-bar">
+              <div class="confidence-level" style="width: 65%"></div>
+              <div class="confidence-value">65%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-actions">
+        <button class="action-btn">
+          <i class="fas fa-share-alt"></i> Compartir
+        </button>
+        <button class="action-btn">
+          <i class="fas fa-bookmark"></i> Guardar
+        </button>
+        <button class="action-btn">
+          <i class="fas fa-file-alt"></i> Reporte completo
+        </button>
+      </div>
+    </article>
+  </div>
+  
+  <div class="section-footer">
+    <button class="view-more-btn">Ver más noticias verificadas</button>
+  </div>
+</section>
