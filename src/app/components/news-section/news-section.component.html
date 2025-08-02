@@ -1,1 +1,35 @@
-<p>news-section works!</p>
+<section class="news-section">
+  <h2 class="section-title">Últimas Noticias</h2>
+  
+  <article class="news-article featured">
+    <div class="article-image">
+      <img src="https://via.placeholder.com/800x450?text=Noticia+Destacada" alt="Noticia destacada">
+      <div class="image-caption">Imagen descriptiva de la noticia destacada</div>
+    </div>
+    <div class="article-content">
+      <h3 class="article-title">Título de la noticia destacada que puede ocupar varias líneas si es necesario</h3>
+      <p class="article-excerpt">Resumen de la noticia destacada que aparece en la sección principal del periódico. Este texto introductorio debe captar la atención del lector y resumir los puntos clave del artículo.</p>
+      <div class="article-meta">
+        <span class="author">Por María López</span>
+        <span class="date">Hace 2 horas</span>
+      </div>
+    </div>
+  </article>
+  
+  <div class="news-grid">
+    <article class="news-article" *ngFor="let article of articles">
+      <div class="article-image">
+        <img [src]="article.image" [alt]="article.title">
+        <div class="image-caption">{{article.caption}}</div>
+      </div>
+      <div class="article-content">
+        <h3 class="article-title">{{ article.title }}</h3>
+        <p class="article-excerpt">{{ article.excerpt }}</p>
+        <div class="article-meta">
+          <span class="author">Por {{article.author}}</span>
+          <span class="date">{{article.date}}</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
