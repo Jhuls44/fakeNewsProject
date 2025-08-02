@@ -1,1 +1,27 @@
-<p>header works!</p>
+<header class="periodico-header">
+  <div class="header-top">
+    <div class="header-info">
+      <div class="date">{{ currentDate | date:'EEEE, d MMMM y' }}</div>
+      <div class="weather">28°C • Soleado</div>
+    </div>
+    <div class="logo-container">
+      <h1 class="logo">El Periódico Digital</h1>
+      <p class="slogan">Verdad • Integridad • Periodismo</p>
+    </div>
+    <div class="subscribe">
+      <button class="subscribe-btn">Suscríbete hoy</button>
+    </div>
+  </div>
+  
+  <nav class="main-nav">
+    <ul>
+      <li><a href="#">Política</a></li>
+      <li><a href="#">Economía</a></li>
+      <li><a href="#">Cultura</a></li>
+      <li><a href="#">Deportes</a></li>
+      <li><a href="#">Tecnología</a></li>
+      <li><a href="#">Opinión</a></li>
+      <li><a href="#">Ciencia</a></li>
+    </ul>
+  </nav>
+</header>
