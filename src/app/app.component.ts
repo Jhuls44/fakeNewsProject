@@ -3,15 +3,15 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NewsSectionComponent } from './components/news-section/news-section.component';
+import { NewsVerifierComponent } from "./components/news-verifier/news-verifier.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, 
-            HeaderComponent, 
-            FooterComponent, 
-            NewsSectionComponent,
-                ],
+  imports: [RouterOutlet,
+    HeaderComponent,
+    FooterComponent,
+    NewsSectionComponent, NewsVerifierComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'] 
 })
