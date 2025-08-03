@@ -1,15 +1,281 @@
-index.html
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta charset="utf-8">
-  <title>Clarion</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clarion - Verificador de Noticias</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
 </head>
 <body>
-  <app-root></app-root>
+    <header class="periodico-header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-info">
+                    <div class="date">Lunes, 5 de Agosto de 2025</div>
+                    <div class="weather">28°C • Soleado</div>
+                </div>
+                <div class="logo-container">
+                    <img *ngIf="!darkMode" 
+                      src="assets/images/logo buho.png" 
+                      alt="Clarion Logo" 
+                      class="logo-svg">
+                    <p class="slogan">Verdad • Integridad • Periodismo</p>
+                </div>
+                <div class="subscribe">
+                    <button class="subscribe-btn">Suscríbete hoy</button>
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#">Política</a></li>
+                    <li><a href="#">Economía</a></li>
+                    <li><a href="#">Cultura</a></li>
+                    <li><a href="#">Deportes</a></li>
+                    <li><a href="#">Tecnología</a></li>
+                    <li><a href="#">Opinión</a></li>
+                    <li><a href="#">Ciencia</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="three-column-layout">
+            <!-- Columna izquierda - Últimas Noticias -->
+            <div class="news-column">
+                <h2 class="section-title">Últimas Noticias</h2>
+                <div class="news-list">
+                    <div class="news-item">
+                        <div class="news-thumbnail">
+                            <img src="https://picsum.photos/300/200?random=1" alt="Noticia 1">
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">Avances en inteligencia artificial revolucionan la medicina</h3>
+                            <div class="news-meta">
+                                <span>Por María López</span>
+                                <span>Hace 2h</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="news-item">
+                        <div class="news-thumbnail">
+                            <img src="https://picsum.photos/300/200?random=2" alt="Noticia 2">
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">Descubren nueva especie en la Amazonía</h3>
+                            <div class="news-meta">
+                                <span>Por Carlos Mendes</span>
+                                <span>Hace 4h</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="news-item">
+                        <div class="news-thumbnail">
+                            <img src="https://picsum.photos/300/200?random=3" alt="Noticia 3">
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">Nueva ley de protección de datos entrará en vigor</h3>
+                            <div class="news-meta">
+                                <span>Por Ana Torres</span>
+                                <span>Hace 6h</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="news-item">
+                        <div class="news-thumbnail">
+                            <img src="https://picsum.photos/300/200?random=4" alt="Noticia 4">
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">Mercado de valores alcanza récord histórico</h3>
+                            <div class="news-meta">
+                                <span>Por Javier Ruiz</span>
+                                <span>Hace 8h</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Columna central - Verificador de Noticias -->
+            <div class="verifier-column">
+                <div class="verifier-box">
+                    <div class="input-header">
+                        <h3>Analiza una noticia</h3>
+                        <p>Pega el texto que quieres verificar</p>
+                    </div>
+                    <textarea class="news-input" placeholder="Copia y pega aquí el texto de la noticia que deseas verificar..."></textarea>
+                    <button class="verify-button">
+                        <i class="fas fa-search"></i> Verificar Noticia
+                    </button>
+                </div>
+                
+                <div class="instructions">
+                    <h3>¿Cómo funciona nuestro verificador?</h3>
+                    <ol>
+                        <li><strong>Copia el texto</strong> de la noticia que deseas verificar</li>
+                        <li><strong>Pégalo en el cuadro</strong> de arriba</li>
+                        <li><strong>Haz clic en "Verificar Noticia"</strong></li>
+                        <li><strong>Recibirás un análisis detallado</strong> sobre su veracidad</li>
+                    </ol>
+                    <div class="note">
+                        <p>Nuestro sistema utiliza inteligencia artificial para comparar la información con miles de fuentes verificadas y determinar su credibilidad.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Columna derecha - Noticias Verificadas -->
+            <div class="verified-column">
+                <h2 class="section-title">Noticias Verificadas</h2>
+                <div class="verified-list">
+                    <div class="verified-item">
+                        <div class="verified-thumbnail">
+                            <img src="https://picsum.photos/300/200?random=5" alt="Noticia verificada">
+                        </div>
+                        <div class="verified-content">
+                            <span class="verification-tag verified-tag">Verificada</span>
+                            <h3 class="verified-title">Descubrimiento de agua en Marte confirmado</h3>
+                            <div class="news-meta">
+                                <span>Hace 1 día</span>
+                                <span>98% confianza</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="verified-item">
+                        <div class="verified-thumbnail">
+                            <img src="https://picsum.photos/300/200?random=6" alt="Noticia falsa">
+                        </div>
+                        <div class="verified-content">
+                            <span class="verification-tag false-tag">Falsa</span>
+                            <h3 class="verified-title">Impuesto especial para redes sociales</h3>
+                            <div class="news-meta">
+                                <span>Hace 2 días</span>
+                                <span>92% confianza</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="verified-item">
+                        <div class="verified-thumbnail">
+                            <img src="https://picsum.photos/300/200?random=7" alt="Noticia parcial">
+                        </div>
+                        <div class="verified-content">
+                            <span class="verification-tag partial-tag">Parcial</span>
+                            <h3 class="verified-title">Reducción de impuestos a pequeñas empresas</h3>
+                            <div class="news-meta">
+                                <span>Hace 3 días</span>
+                                <span>65% confianza</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="verified-item">
+                        <div class="verified-thumbnail">
+                            <img src="https://picsum.photos/300/200?random=8" alt="Noticia verificada">
+                        </div>
+                        <div class="verified-content">
+                            <span class="verification-tag verified-tag">Verificada</span>
+                            <h3 class="verified-title">Nuevo tratamiento para enfermedad rara</h3>
+                            <div class="news-meta">
+                                <span>Hace 4 días</span>
+                                <span>96% confianza</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="periodico-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">Clarion</div>
+                    <p class="slogan">Información verificada y confiable</p>
+                    <p class="copyright">© 2025 El Periódico Digital.<br>Todos los derechos reservados.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="links-column">
+                        <h3>Navegación</h3>
+                        <ul>
+                            <li><a href="#">Inicio</a></li>
+                            <li><a href="#">Política</a></li>
+                            <li><a href="#">Economía</a></li>
+                            <li><a href="#">Cultura</a></li>
+                            <li><a href="#">Deportes</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="links-column">
+                        <h3>Recursos</h3>
+                        <ul>
+                            <li><a href="#">Archivo</a></li>
+                            <li><a href="#">Suscripciones</a></li>
+                            <li><a href="#">Publicidad</a></li>
+                            <li><a href="#">Empleo</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="links-column">
+                        <h3>Compañía</h3>
+                        <ul>
+                            <li><a href="#">Sobre nosotros</a></li>
+                            <li><a href="#">Contacto</a></li>
+                            <li><a href="#">Términos</a></li>
+                            <li><a href="#">Privacidad</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contacto</h3>
+                    <p>contacto@periodicodigital.com</p>
+                    <p>+34 123 456 789</p>
+                    <p>Calle de la Prensa, 1<br>Madrid, España</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-legal">
+                <p>El Periódico Digital es una publicación independiente. Todos los contenidos son propiedad de sus respectivos autores.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Actualizar la fecha actual
+        const dateElement = document.querySelector('.date');
+        if (dateElement) {
+            const now = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            dateElement.textContent = now.toLocaleDateString('es-ES', options);
+        }
+
+        // Manejar el botón de verificación
+        const verifyButton = document.querySelector('.verify-button');
+        if (verifyButton) {
+            verifyButton.addEventListener('click', function() {
+                const textarea = document.querySelector('.news-input');
+                if (textarea && textarea.value.trim() !== '') {
+                    alert('Su noticia está siendo verificada. Los resultados se mostrarán en breve.');
+                } else {
+                    alert('Por favor, ingrese el texto de la noticia que desea verificar.');
+                }
+            });
+        }
+    </script>
 </body>
 </html>
