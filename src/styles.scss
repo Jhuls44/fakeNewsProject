@@ -180,20 +180,3 @@ body {
 .center-column {
   min-width: 0; 
 }
-
-@media (max-width: 600px) {
-  .logo-container {
-    .logo-link {
-      flex-direction: column;
-      gap: 0.2rem;
-    }
-    
-    .logo-text {
-      font-size: 1.4rem;
-    }
-    
-    .slogan {
-      font-size: 0.7rem;
-    }
-  }
-}
