@@ -1,7 +1,9 @@
 .verified-section {
-  padding: 3rem 0;
+  padding: 1rem 0;
   background: #f8f8f8;
   border-top: 1px solid #eaeaea;
+  max-width: 320px;
+  margin: 0 auto;
   
   .section-header {
     display: flex;
@@ -128,10 +130,13 @@
           height: 100%;
           object-fit: cover;
           transition: transform 0.5s ease;
+          max-width: 100%;
         }
         
+
+       
         .image-caption {
-          position: absolute;
+          position:fixed;
           bottom: 0;
           left: 0;
           right: 0;

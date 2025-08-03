@@ -39,16 +39,16 @@ body {
 }
 
 .container {
-  max-width: var(--max-width);
+    max-width: calc(var(--max-width) - 4rem); /* Reducir el ancho máximo */
   margin: 0 auto;
-  padding: 0 var(--gutter);
+  padding: 0 1rem;
 }
 
 /* Grid de 3 columnas */
 .three-column-grid {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  gap: 2rem;
+  gap: 1.5rem;
   margin: 0 auto;
   max-width: var(--max-width);
   padding: 0 var(--gutter);
@@ -57,13 +57,14 @@ body {
 .left-column, .right-column {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
+  padding: 0 0.5rem;
 }
 
 /* Responsividad */
 @media (max-width: 1200px) {
   .three-column-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     grid-template-areas:
       "left center"
       "right center";
@@ -89,6 +90,8 @@ body {
       "center"
       "left"
       "right";
+        gap: 1.5rem;
+    padding: 0 1rem;
   }
 
   :root {
@@ -96,7 +99,6 @@ body {
   }
 }
 
-/* Estilos comunes para componentes */
 .section-title {
   font-family: var(--font-display);
   font-size: 1.8rem;
