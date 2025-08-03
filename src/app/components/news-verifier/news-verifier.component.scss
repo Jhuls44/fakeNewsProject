@@ -1,36 +1,24 @@
+/* news-verifier.component.scss */
 .verifier-section {
-  padding: 1.5rem;
-  background: #f8f8f8;
-  border-radius: 4px;
-  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-
-  .section-title {
-    margin-bottom: 2rem;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 
   .verifier-box {
-    background: white;
-    border-radius: 4px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    overflow: hidden;
-    margin-bottom: 2rem;
-
     .input-header {
       background: var(--accent-color);
-      color: white;
+      color: var(--primary-color);
       padding: 1.2rem 1.5rem;
       
       h3 {
-        font-family: var(--font-sans);
-        font-size: 1.3rem;
+        font-family: var(--font-display);
+        font-size: 1.5rem;
         margin: 0;
-        color: white;
       }
       
       p {
         margin: 0.3rem 0 0;
         font-size: 0.95rem;
-        opacity: 0.9;
       }
     }
 
@@ -53,44 +41,19 @@
     }
 
     .verify-button {
-      background: var(--primary-color);
-      color: white;
-      border: none;
-      padding: 1rem 1.5rem;
-      font-family: var(--font-sans);
-      font-size: 1.1rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.3s ease;
       width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.8rem;
-
-      .icon {
-        font-size: 1.2rem;
-      }
-
-      &:hover {
-        background: lighten(#121212, 10%);
-      }
+      border-radius: 0 0 4px 4px;
     }
   }
 
   .instructions {
-    background: white;
     padding: 1.8rem;
-    border-radius: 4px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-
+    
     h3 {
-      font-family: var(--font-sans);
+      font-family: var(--font-display);
       font-size: 1.4rem;
       margin-bottom: 1.5rem;
       color: var(--primary-color);
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid var(--border-color);
     }
 
     ol {
@@ -117,4 +80,34 @@
     }
   }
 }
+.verifier-section {
+  .verifier-hero {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 4px;
+    
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      color: var(--accent-color);
+    }
+    
+    .hero-subtitle {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+  }
 
+  .verifier-box {
+    margin-bottom: 2rem;
+    
+    .news-input {
+      min-height: 300px; 
+    }
+  }
+  
+}

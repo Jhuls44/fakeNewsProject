@@ -1,12 +1,10 @@
-@use "sass:color"; 
-.periodico-header {
-  border-bottom: 2px solid var(--primary-color);
-  margin-bottom: 2rem;
+.newspaper-header {
   background: white;
   position: sticky;
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-bottom: 2px solid var(--primary-color);
 
   .header-top {
     display: grid;
@@ -15,55 +13,55 @@
     padding: 1rem var(--gutter);
     border-bottom: 1px solid var(--border-color);
 
-    .header-info {
-      display: flex;
-      flex-direction: column;
-      gap: 0.3rem;
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 1rem;
+    }
+  }
+
+  .header-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: var(--light-text);
+
+    @media (max-width: 900px) {
+      order: 2;
+    }
+  }
+
+  .logo-container {
+    text-align: center;
+    padding: 0 1rem;
+
+    .logo {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 700;
+      margin: 0;
+      line-height: 1;
+      color: var(--primary-color);
+    }
+
+    .slogan {
       font-family: var(--font-sans);
       font-size: 0.9rem;
-      color: #666;
+      color: var(--light-text);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: 0.3rem;
     }
+  }
 
-    .logo-container {
+  .subscribe {
+    text-align: right;
+
+    @media (max-width: 900px) {
       text-align: center;
-      padding: 0 1rem;
-
-      .logo {
-        font-size: 3.5rem;
-        font-weight: 900;
-        margin: 0;
-        line-height: 1;
-        letter-spacing: -1.5px;
-      }
-
-      .slogan {
-        font-family: var(--font-sans);
-        font-size: 0.9rem;
-        color: #666;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        margin-top: 0.3rem;
-      }
-    }
-
-    .subscribe {
-      text-align: right;
-
-      .subscribe-btn {
-        background: var(--accent-color);
-        color: white;
-        border: none;
-        padding: 0.7rem 1.5rem;
-        font-family: var(--font-sans);
-        font-weight: 500;
-        font-size: 0.9rem;
-        cursor: pointer;
-        transition: all 0.3s ease;
-
-        &:hover {
-          background: color.adjust(#8b0000, $lightness: -10%);
-        }
-      }
+      order: 3;
     }
   }
 
@@ -77,6 +75,11 @@
       list-style: none;
       gap: 1.5rem;
       margin: 0;
+      flex-wrap: wrap;
+
+      @media (max-width: 600px) {
+        gap: 0.8rem;
+      }
 
       li a {
         font-family: var(--font-sans);
@@ -85,36 +88,12 @@
         letter-spacing: 0.5px;
         font-size: 0.9rem;
         color: white;
+        transition: color 0.3s ease;
 
         &:hover {
-          color: #ccc;
+          color: var(--accent-color);
         }
       }
     }
-  }
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  
-  .logo-svg {
-    width: 60px;
-    height: 60px;
-    transition: transform 0.3s ease;
-    
-    &:hover {
-      transform: scale(1.05);
-    }
-  }
-  
-  .slogan {
-    font-family: var(--font-sans);
-    font-size: 0.9rem;
-    color: var(--light-text);
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-top: 0.3rem;
   }
 }

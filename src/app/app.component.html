@@ -1,5 +1,21 @@
-<app-header></app-header>
-<app-news-section></app-news-section>
-<app-news-verifier></app-news-verifier> 
-<app-verified-news></app-verified-news>
-<app-footer></app-footer>
+<div class="newspaper-layout">
+  <app-header></app-header>
+  
+  <main class="main-content">
+    <div class="three-column-grid">
+      <div class="left-column">
+        <app-news-section></app-news-section>
+      </div>
+      
+      <div class="center-column">
+        <app-news-verifier></app-news-verifier>
+      </div>
+      
+      <div class="right-column">
+        <app-verified-news></app-verified-news>
+      </div>
+    </div>
+  </main>
+  
+  <app-footer></app-footer>
+</div>
