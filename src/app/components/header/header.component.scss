@@ -97,3 +97,50 @@
     }
   }
 }
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  
+  .logo-link {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-decoration: none;
+    
+    &:hover {
+      .logo-img {
+        transform: rotate(-5deg) scale(1.05);
+      }
+    }
+  }
+
+  .logo-img {
+    height: 50px; /* Ajustable según tu logo */
+    width: auto;
+    transition: all 0.3s ease;
+    
+    @media (max-width: 768px) {
+      height: 40px;
+    }
+  }
+
+  .logo-text {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+  }
+
+  .slogan {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    color: var(--light-text);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: -5px; 
+  }
+}
