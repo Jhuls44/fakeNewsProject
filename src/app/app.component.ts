@@ -9,12 +9,13 @@ import { VerifiedNewsComponent } from './components/verified-news/verified-news.
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,
+  imports: [
     HeaderComponent,
     FooterComponent,
     NewsSectionComponent, 
     NewsVerifierComponent,
-    VerifiedNewsComponent],
+    VerifiedNewsComponent
+  ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'] 
 })
